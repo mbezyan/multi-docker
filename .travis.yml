@@ -9,7 +9,7 @@ before_install:
 # This is where tests will be executed
 # Here we can add more steps for testing other components
 script:
-  - docker run mbezyan/react-test npm test -- --coverage
+  - docker run -e CI=true mbezyan/react-test npm test
 
 # Here we build images for Production version of each component
 after_success:
